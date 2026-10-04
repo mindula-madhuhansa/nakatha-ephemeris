@@ -1,0 +1,24 @@
+{
+  "name": "nakatha-ephemeris",
+  "version": "0.1.0",
+  "description": "Sky-position service for Nakatha: Swiss Ephemeris behind a small authenticated JSON API.",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "engines": {
+    "node": ">=24.2"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "dev": "node --env-file-if-exists=.env --watch src/server.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "sweph": "^2.10.3-8"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "typescript": "^5"
+  }
+}
